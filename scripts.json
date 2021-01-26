@@ -1,0 +1,12 @@
+  "scripts": {
+    "build:clean": "./node_modules/.bin/rimraf dist",
+    "build:ts": "./node_modules/.bin/tsc",
+    "build": "npm run build:clean && npm run build:ts",
+    "start": "npm run build && node ./dist/index.js",
+    "start:warn-sync": "ts-node --trace-sync-io index.ts",
+    "start:inspect": "ts-node --inspect index.ts",
+    "start:gc": "ts-node --trace_gc index.ts",
+    "dev": "ts-node-dev --respawn index.ts",
+    "dev:inspect": "ts-node-dev --inspect --respawn index.ts",
+    "lint": "eslint ./"
+  }

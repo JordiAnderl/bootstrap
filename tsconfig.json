@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "noEmitOnError": false,
+    "paths": {
+      "*": ["*"]
+    },
+    "moduleResolution": "node",
+    "module": "commonjs"
+  },
+  "exclude": ["node_modules", "**/__tests__/**/*"]
+}
