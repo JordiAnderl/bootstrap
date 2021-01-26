@@ -24,7 +24,7 @@ curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/scripts.json -
 cat scripts.json >> package.json
 rm scripts.json
 
-echo  } >> package.json
+echo  \} >> package.json
 
 sed -i '' "s/index/$entryPoint/g" package.json
 
