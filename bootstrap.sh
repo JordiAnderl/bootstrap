@@ -20,7 +20,9 @@ sed -i '' -e '$ d' package.json
 
 echo  , >> package.json
 
-cat ../scripts.json >> package.json
+curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/scripts.json -s -o scripts.json
+cat scripts.json >> package.json
+rm scripts.json
 
 echo  } >> package.json
 
@@ -30,11 +32,10 @@ touch $entryPoint.ts
 
 mkdir scr
 
-cp ../tsconfig.json tsconfig.json
-cp ../.prettierrc .prettierrc
+curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/tsconfig.json -s -o tsconfig.json
+curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/.prettierrc -s -o .prettierrc
 
 mkdir .vscode
 
-cp ../launch.json .vscode/launch.json
-
-#TODO: Get files from repo
+curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/launch.json -s -o launch.json
+mv launch.json .vscode/launch.json
