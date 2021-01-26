@@ -21,12 +21,13 @@ sed -i '' -e '$ d' package.json
 echo  , >> package.json
 
 curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/scripts.json -s -o scripts.json
+
+sed -i '' "s/index/$entryPoint/g" scripts.json
 cat scripts.json >> package.json
 rm scripts.json
 
 echo  \} >> package.json
 
-sed -i '' "s/index/$entryPoint/g" package.json
 
 touch $entryPoint.ts
 
@@ -38,4 +39,5 @@ curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/.prettierrc -s
 mkdir .vscode
 
 curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/launch.json -s -o launch.json
+sed -i '' "s/index/$entryPoint/g" launch.json
 mv launch.json .vscode/launch.json

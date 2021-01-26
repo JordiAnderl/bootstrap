@@ -18,6 +18,19 @@
       "port": 9229,
       "restart": true,
       "protocol": "inspector"
+    },
+    {
+      "name": "Debug",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only"],
+
+      "args": ["index.ts"],
+
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
     }
   ]
 }
