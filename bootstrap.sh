@@ -33,11 +33,17 @@ touch $entryPoint.ts
 
 mkdir scr
 
+# Main configs
 curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/configs/tsconfig.json -s -o tsconfig.json
 curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/configs/.prettierrc -s -o .prettierrc
+curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/configs/.gitignore -s -o .gitignore
 
+# VSCode configs
 mkdir .vscode
 
 curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/configs/launch.json -s -o launch.json
 sed -i '' "s/index/$entryPoint/g" launch.json
 mv launch.json .vscode/launch.json
+
+curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/configs/settings.json -s -o settings.json
+mv settings.json .vscode/settings.json
