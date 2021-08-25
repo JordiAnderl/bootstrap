@@ -10,7 +10,7 @@ yarn init
 
 yarn add typescript 
 
-yarn add -D @types/node ts-node ts-node-dev rimraf prettier eslint
+yarn add -D @types/node ts-node ts-node-dev rimraf prettier eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
 
 sed -i '' 's/.js/.ts/g' package.json
 
@@ -37,6 +37,7 @@ mkdir scr
 curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/configs/tsconfig.json -s -o tsconfig.json
 curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/configs/.prettierrc -s -o .prettierrc
 curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/configs/.gitignore -s -o .gitignore
+curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/configs/.eslintrc.yml -s -o .eslintrc.yml
 
 # VSCode configs
 mkdir .vscode
