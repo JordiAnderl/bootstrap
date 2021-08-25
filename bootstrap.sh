@@ -31,7 +31,7 @@ echo  \} >> package.json
 
 touch $entryPoint.ts
 
-mkdir scr
+mkdir src
 
 # Main configs
 curl https://raw.githubusercontent.com/JordiAnderl/bootstrap/main/configs/tsconfig.json -s -o tsconfig.json
